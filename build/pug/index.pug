@@ -59,7 +59,7 @@ html
                                    | Тел. деканата ___________ <br>
                 .page__number 3
             .page
-                .page__title Памятка
+                .page__title.page__title_uppercase.page__title_mb-0 Памятка
                 .page__title для студентов на период зачетной и экзаменационной сессии <br>
                 ol.page__list.list
                     li.list__item Для сдачи зачетов и экзаменов студент должен иметь при себе зачетную книжку.
@@ -121,4 +121,118 @@ html
                 .center
                     i.text.text_center НАПРАВЛЕНИЕ
                 .page__number 5
+            .page
+                .page__title.page__title_uppercase УКАЗАНИЯ К ВЕДЕНИЮ ЖУРНАЛА
+                ol.page__list.list
+                    li.list__item Журнал является государственным документом, и ведение его обязательно для старосты каждой академической группы.
+                    li.list__item Декан факультета обязан систематически наблюдать за правильным ведением журналов.
+                    li.list__item Все записи в журнале должны вестись четко, аккуратно и только чернилами.
+                    li.list__item На каждую дисциплину выделяется на год соответствующее количество страниц пропорционально числу часов по учебному плану.
+                    li.list__item На левой стороне (странице) журнала в соответствующей графе староста проставляет дату занятия, повторяя ее столько раз, сколько состоялось часов занятий. <br>
+                        |Отсутствие на уроке отмечается дробью – буквами «Н/Б» (болезнь), «Н/О» (отпуск), «Н/П» (прогул); если причина отсутствия неизвестна, под буквой «Н» оставляется место.
+                    li.list__item На правой стороне (странице) журнала староста записывает тему занятий и количество часов. Эти сведения заверяются преподавателем.
+                    li.list__item Каждый месяц староста проставляет общее количество часов, пропущенных студентом за месяц, в таблице в конце журнала.
+                    li.list__item Журнал после окончания учебного года сдается в деканат.
+                .page__number 6
+            .page
+                .page__title.page__title_uppercase.page__title_font-weight-normal ОГЛАВЛЕНИЕ
+                table.table
+                    thead
+                        tr
+                            th Дисциплина
+                            th Преподаватель
+                            th Страницы
+                    tbody
+                        -for (let i=0;i<36;i++)
+                            tr
+                                td
+                                td
+                                td
+                .page__number 7
+            .page
+                .page__title Наименование дисциплины _____________________________________
+                table.table
+                    tr
+                        td(colspan=2 rowspan=4).text_center №
+                        td(colspan=8 rowspan=4)
+                            .table__top-cell Месяц и число
+                            .table__bottom-cell Фамилия <br> и инициалы студента
+                            .table__diagonal-line 
+                        td(colspan=20 rowspan=2)
+                    tr
+                    tr
+                        -for (let i=1;i<=20;i++)
+                            td(rowspan=2)
+                    tr
+                    -for (let i=1;i<=35;i++)
+                        tr
+                            td(colspan=2).text_center=i+"."
+                            td(colspan=8)
+                            -for (let j=0;j<20;j++)
+                                td
+                    tr
+                        td(colspan=2)
+                        td(colspan=8)
+                            div.text_right Итого
+                        -for (let j=0;j<20;j++)
+                            td
+                .page__number 8
+            .page
+                .page__title Фамилия преподавателя _____________________________________
+                table.table.table_text-12pt.table_h-42px
+                    tr 
+                        th(rowspan=2 colspan=2) Число и месяц
+                        th(rowspan=2 colspan=12) ТЕМА ЗАНЯТИЯ
+                        th(colspan=4) Количество
+                        th(colspan=3 rowspan=2) Подпись преподавателя
+                    tr
+                        th(colspan=2) лекции
+                        th(colspan=2) практ. занят.
+                    -for (let i=0;i<20;i++)
+                        tr
+                            td(colspan=2)
+                            td(colspan=12)
+                            td(colspan=2)
+                            td(colspan=2)
+                            td(colspan=3)
+                .page__number 9
+            .page
+                table.table.table_text-12pt
+                    tr._10pt
+                        th(rowspan=4 colspan=2) №
+                        th(rowspan=4 colspan=7) Фамилия<br>и инициалы<br>студентов
+                        th(colspan=25) Пропущено часов
+                    tr._10pt
+                        th(colspan=5) сентябрь
+                        th(colspan=5) октябрь
+                        th(colspan=5) ноябрь
+                        th(colspan=5) декабрь
+                        th(colspan=5) январь
+                    tr.vertical
+                        -for (let i=0;i<5;i++)
+                            th(rowspan=2)
+                                p всего
+                            th(rowspan=2)
+                                p в т. ч. по<br>болезни
+                            th(rowspan=2)
+                                p по другим<br>причинам
+                            th(rowspan=2)
+                                p прогулов
+                            th(rowspan=2)
+                                p опозданий
+                    tr
+                    -for (let i=1;i<=33;i++)
+                        tr 
+                            td(colspan=2).text_center=i+"."
+                            td(colspan=7)
+                            -for (let j=0; j<25;j++)
+                                td
+                    tr
+                        td(colspan=2)
+                        td(colspan=7)
+                            div.text_right Итого
+                            -for (let j=0; j<25;j++)
+                                td
+                .page__number 10
 
+                        
