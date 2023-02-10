@@ -2,6 +2,7 @@ $page-width: 21cm;
 $page-height: 29.7cm;
 
 .page {
+    position: relative;
     font-family: "Times New Roman", Times, serif;
     font-size: 14pt;
     line-height: 1.5;
@@ -14,25 +15,94 @@ $page-height: 29.7cm;
 
     &__field {
         text-align: center;
+        line-height: 1.2;
+    }
+
+    &__number{
+        font-size: 16pt;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 0 0 1cm -1.5cm;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 16pt;
+        font-weight: bolder;
+        line-height: 1.2;
+        &_uppercase {
+            text-transform: uppercase;
+        }
+    }
+
+    &__list {
+        font-size: 14pt;
     }
 }
 
-.work-time-decanat {
+.bordered-block {
     border: 2px solid #000;
-    font-size: 16pt;
-    font-weight: bolder;
     text-align: center;
-    padding: 6pt 0;
+    padding: 6pt 18pt;
+    width: fit-content;
+    margin: 0 auto;
+
+    &_5pt {
+        font-size: 5pt;
+    }
+
+    &_10pt {
+        font-size: 10pt;
+    }
+
+    &_16pt {
+        font-size: 16pt;
+    }
+
+
+
+    &_bold {
+        font-weight: bolder;
+    }
+
+    &_mt-10px {
+        margin-top: 10px;
+    }
+
+    &_p-4 {
+        padding: 8pt;
+    }
+
+    &_leading-1{
+        line-height: 1.2;
+    }
+
+    &_justify {
+        text-align: justify;
+    }
 }
 
 .list {
     padding-inline-start: 0;
-    line-height: 1;
+    line-height: 1.1;
     text-align: justify;
     list-style: decimal inside;
+    display: inline;
     &__item {
         text-indent: 1cm;
+        &_tab {
+            padding-inline-start: 40px;
+        }
     }
+
+    &_dash {
+        list-style-type: "-";
+    }
+
+    
 }
 
 .top-title {
@@ -54,13 +124,13 @@ $page-height: 29.7cm;
     }
 }
 
-.page__title {
-    text-align: center;
-    font-size: 16pt;
-    font-weight: bolder;
+.text{
+    &_center {
+        text-align: center;
+    }
 }
 
-.page__list {
-    font-size: 14pt;
+.center {
+    display: flex;
+    justify-content: center;
 }
-
