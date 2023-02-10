@@ -1,0 +1,66 @@
+$page-width: 21cm;
+$page-height: 29.7cm;
+
+.page {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 14pt;
+    line-height: 1.5;
+    width: $page-width;
+    height: $page-height;
+    margin: 100px auto;
+    padding: 1.2cm 1.5cm 1.5cm 1.5cm;
+    outline: solid #787878 1.5px;
+    box-sizing: border-box;
+
+    &__field {
+        text-align: center;
+    }
+}
+
+.work-time-decanat {
+    border: 2px solid #000;
+    font-size: 16pt;
+    font-weight: bolder;
+    text-align: center;
+    padding: 6pt 0;
+}
+
+.list {
+    padding-inline-start: 0;
+    line-height: 1;
+    text-align: justify;
+    list-style: decimal inside;
+    &__item {
+        text-indent: 1cm;
+    }
+}
+
+.top-title {
+    margin-block: 0;
+    font-size: 14pt;
+    text-align: center;
+    // line-height: 1.5;
+}
+
+.main-title {
+    font-weight: bolder;
+    text-align: center;
+    margin-block: 0;
+    font-size: 20pt;
+    // line-height: 1.5;
+
+    &_large-string {
+        font-size: 28pt;
+    }
+}
+
+.page__title {
+    text-align: center;
+    font-size: 16pt;
+    font-weight: bolder;
+}
+
+.page__list {
+    font-size: 14pt;
+}
+
