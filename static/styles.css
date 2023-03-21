@@ -4166,6 +4166,12 @@ img {
   vertical-align: middle;
 }
 
+@media print {
+  .page {
+    page-break-after: always;
+    outline: none;
+  }
+}
 .page {
   position: relative;
   font-family: "Times New Roman", Times, serif;
@@ -4173,9 +4179,7 @@ img {
   line-height: 1.5;
   width: 21cm;
   height: 29.7cm;
-  margin: 100px auto;
   padding: 1.2cm 1.5cm 1.5cm 1.5cm;
-  outline: solid #787878 1.5px;
   box-sizing: border-box;
 }
 .page__field {
@@ -4183,7 +4187,7 @@ img {
   line-height: 1.2;
 }
 .page__number {
-  font-size: 16pt;
+  font-size: 14pt;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -4270,7 +4274,7 @@ img {
 
 .table {
   width: 100%;
-  font-size: 16pt;
+  font-size: 14pt;
   line-height: 1;
   border-collapse: collapse;
   table-layout: fixed;
@@ -4288,7 +4292,7 @@ img {
   position: relative;
 }
 .table tr {
-  height: 24px;
+  height: 16pt;
 }
 .table__bottom-cell {
   font-size: 10pt;
